@@ -18,7 +18,8 @@
 }
 
 .header-name {
-  font-size: 24px;
+  font-style: italic;
+  font-size: 32px;
   color: white;
 }
 
@@ -29,10 +30,10 @@
 .header-button a {
   font-size: 24px;
   text-decoration: none;
-  border: 5px solid #de135e;
+  border: 3px solid #de135e;
   border-radius: 20px;
   color: darkred;
-  padding: 20px;
+  padding: 10px;
 }
 
 .rooms {
@@ -71,18 +72,38 @@
 
 .header-title {
   color: #333;
-  font-size: 32px;
+  font-size: 28px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.right-header {
+  width: 50%;
+  margin-left: 50px;
 }
 
 .make_task{
   color: black;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size:20px;
 }
 
 .make_text{
-  width:120%;
+  width:80%;
   margin-bottom: 5px;
+}
+
+.logout{
+  width: 15%;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 40px;
+  text-align: center;
+  color: white;
+  background-color: orange;
+
 }
 
 .messages {
