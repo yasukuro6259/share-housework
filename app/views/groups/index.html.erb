@@ -40,6 +40,7 @@
       <input type=text placeholder= "ここに入力してください" class="make_text">
       <input type=submit>
   </div>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout"%>
 </div>
 
 <div class="messages">
