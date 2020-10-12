@@ -1,0 +1,141 @@
+.wrapper {
+  display: flex;
+}
+.side-bar {
+  background-image: url("/images/paper_00108.jpg");
+  font-family: Helvetica , "游ゴシック", sans-serif;
+  width: 600px;
+  height: 100vh;
+}
+
+.side-bar-header {
+  height: 120px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:2px dashed white;
+}
+
+.header-name {
+  font-size: 24px;
+  color: white;
+}
+
+.create-room {
+  font-size: 20px;
+}
+
+.header-button a {
+  font-size: 24px;
+  text-decoration: none;
+  border: 5px solid #de135e;
+  border-radius: 20px;
+  color: darkred;
+  padding: 20px;
+}
+
+.rooms {
+  height: calc(100vh - 100px);
+  padding: 46px 20px 0;
+  overflow: scroll;
+}
+
+.room {
+  padding: 0 40px 32px;
+}
+
+.room-name{
+  text-align: center;
+  font-size: 32px;
+}
+
+.room-name a {
+  text-decoration: none;
+  color: black;
+}
+
+.chat {
+  background-image: url("/images/wood-texture_00031.jpg");
+  width: calc(100% - 300px);
+}
+
+.chat-header {
+  height: 120px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom:2px dashed white;
+}
+
+.header-title {
+  color: #333;
+  font-size: 32px;
+}
+
+.make_task{
+  color: black;
+  margin-bottom: 5px;
+  font-size:20px;
+}
+
+.make_text{
+  width:120%;
+  margin-bottom: 5px;
+}
+
+.messages {
+  height: calc(100vh - 100px);
+  padding: 46px 80px 0;
+  overflow: scroll;
+}
+.message {
+  margin: 10px 0;
+}
+
+.upper-message{
+  display: flex;
+}
+
+.message-user {
+  color: #434a54;
+  font-size: 16px;
+}
+
+.message-date {
+  color: #999;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.lower-message {
+  margin-top: 10px;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  text-align: center;
+}
+
+.message-content {
+  color: #434a54;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.edit-delete{
+  display:flex;
+  justify-content: space-around;
+  align-items:center;
+  text-align: center;
+  width: 150px;
+}
+
+.edit-delete-button{
+  margin-bottom: 20px;
+}
+
+.button{
+  text-decoration: none;
+  font-size: 16px;
+}
