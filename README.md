@@ -42,7 +42,7 @@ Things you may want to cover:
 
 | Column | Type      | Options                         |
 | ------ | --------- | ------------------------------- |
-| content| text      | null: false                     |
+| content| string    | null: false                     |
 | user   | reference | null: false, foreign_key: true |
 
 ### Association
@@ -52,11 +52,12 @@ Things you may want to cover:
 
 ## tasks テーブル
 
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| content| text       | null: false                     |
-| user   | references | null: false, foreign_key: true |
-| group  | references | null: false, foreign_key: true |
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| content     | string     | null: false                    |
+| description | text       | null: false                    |
+| user        | references | null: false, foreign_key: true |
+| group       | references | null: false, foreign_key: true |
 
 ### Association
 
