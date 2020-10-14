@@ -8,33 +8,25 @@
       <div class="create-room">
         <div class="make-list">
           <div class="header-button">
-            <%= form_with model: @group, local: true do |f| %>
-              <%= f.text_field :content, class: "group-text", placeholder: 'type a message' %>
-            <%# <a href="#">To do list作成</a> %>
+            <a href="#">To do list作成</a>
           </div>
-            <%= f.submit "送信"%>
-            <% end %>
-        </div>
+      </div>
       </div>
     </div>
 
     <div class="rooms">
-      <% @groups.each do |group| %>
-        <div class="room">
-          <div class="room-name">
-            <%= link_to group.content, group_tasks_path(:id) %>
-            <%# <a href="#">家事_朝</a> %>
-          </div>
+      <div class="room">
+        <div class="room-name">
+          <a href="#">家事_朝</a>
         </div>
-      <% end %>
-      <%# <div class="room">
+      </div>
+      <div class="room">
         <div class="room-name">
           <a href="#">家事_帰宅後</a>
         </div>
-      </div> %>
+      </div>
     </div>
   </div>
-
   <div class="chat">
     <%# <%= render "main_chat" %>
     <div class="chat-header">
