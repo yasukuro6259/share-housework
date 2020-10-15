@@ -26,7 +26,7 @@ class TasksController < ApplicationController
     @group = Group.find(params[:group_id])
     @task = @group.tasks.find(params[:id])
   end
-
+  
   private
   def task_params
     params.require(:task).permit(:content, :description, :image).merge(user_id: current_user.id)
