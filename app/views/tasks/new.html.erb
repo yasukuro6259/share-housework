@@ -24,6 +24,12 @@
           <%= f.file_field :image, id:"task-image" %>
         </div>
       </div>
+      <div class="btn">
+      <%= f.submit "送信", class:"send-btn" %>
+      <%= link_to "戻る", group_tasks_path, class:"back-btn"%>
+      </div>
     </div>
     <% end %>
+    
+
   </div>

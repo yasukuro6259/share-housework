@@ -1,0 +1,35 @@
+  <div class="chat">
+    <div class="chat-header">
+      <div class="left-header">
+        <div class="header-title">
+          <%= @group_id.content %>
+        </div>
+      </div>
+      <div class="right-header">
+        <div class="make_task">タスク作成</div>
+          <input type=text placeholder= "ここに入力してください" class="make_text">
+          <input type=submit>
+      </div>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout"%>
+    </div>
+
+    <div class="messages">
+      <% @tasks.each do |task|%>
+      <div class="message">
+        <div class="lower-message">
+          <div class="message-content">
+            <%= task.content%>
+          </div>
+          <div class="edit-delete">
+            <div class="edit-delete-button">
+              <a href="#" class="button">詳細</a>
+            </div>
+            <div class="edit-delete-button">
+              <a href="#" class="button">削除</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>

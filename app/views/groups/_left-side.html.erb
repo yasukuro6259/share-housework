@@ -1,0 +1,27 @@
+  <div class="side-bar">
+    <div class="side-bar-header">
+      <div class="header-name">
+        Kuroki Family
+      </div>
+      <div class="create-room">
+        <div class="make-list">
+          <div class="header-button">
+            <%= form_with model: @group, local: true do |f| %>
+              <%= f.text_field :content, class: "group-text", placeholder: 'type a message' %>
+          </div>
+            <%= f.submit "送信"%>
+            <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="rooms">
+      <% @groups.each do |group| %>
+        <div class="room">
+          <div class="room-name">
+            <%= link_to group.content, group_tasks_path(group) %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
