@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :task_params, only: :create
 
   def index
-    @group = Group.new #入力フォームを空にするため
+    @group = Group.new
     @groups = Group.includes(:user)
     @group_id = Group.find(params[:group_id]) #@groupだとリスト入力フォームに入力されてしまう。
     @tasks = @group_id.tasks.includes(:user)
@@ -22,6 +22,11 @@ class TasksController < ApplicationController
     end
   end
 
+  def show
+    @group = Group.find(params[:group_id])
+    @task = @group.tasks.find(params[:id])
+  end
+  
   private
   def task_params
     params.require(:task).permit(:content, :description, :image).merge(user_id: current_user.id)

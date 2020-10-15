@@ -5,11 +5,7 @@
           <%= @group_id.content %>
         </div>
       </div>
-      <div class="right-header">
-        <div class="make_task">タスク作成</div>
-          <input type=text placeholder= "ここに入力してください" class="make_text">
-          <input type=submit>
-      </div>
+      <%= link_to "タスク作成", new_group_task_path(@group_id), class: "create-task"%>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout"%>
     </div>
 
@@ -22,10 +18,10 @@
           </div>
           <div class="edit-delete">
             <div class="edit-delete-button">
-              <a href="#" class="button">詳細</a>
+              <%= link_to "詳細", group_task_path(@group_id, task), method: :get, class: "show-delete-btn" %>
             </div>
             <div class="edit-delete-button">
-              <a href="#" class="button">削除</a>
+              <%= link_to "削除", group_task_path(@group_id, task), method: :delete, class: "show-delete-btn" %>
             </div>
           </div>
         </div>
