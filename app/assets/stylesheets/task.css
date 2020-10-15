@@ -2,7 +2,7 @@
   border: solid 5px black;
 } */
 .task{
-  width: 60%;
+  width: 80vw;
   height: 100vh;
   border: solid 1px black;
   margin: 10px auto;
@@ -55,4 +55,13 @@
   color: #fff;
   padding: 10px;
   text-decoration: none;
+}
+
+.edit-btn{
+  font-size: 32px;
+  width: 100px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
 }

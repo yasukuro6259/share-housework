@@ -10,9 +10,9 @@
 
 .side-bar-header {
   height: 120px;
-  padding: 0 20px;
+  padding: 0 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   border-bottom:2px dashed white;
 }
@@ -21,10 +21,22 @@
   font-style: italic;
   font-size: 32px;
   color: white;
+  margin-right: 20px;
 }
 
 .create-room {
   font-size: 20px;
+}
+
+.group-text{
+  font-size: 14px;
+  width: 250px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.submit-btn{
+  padding: 0 10px;
 }
 
 .header-button a {
@@ -58,7 +70,7 @@
 
 .chat {
   background-image: url("/images/wood-texture_00031.jpg");
-  width: calc(100% - 300px);
+  width: 60%;
 }
 
 .chat-header {
@@ -73,37 +85,26 @@
 .header-title {
   color: #333;
   font-size: 28px;
-  margin-left: 20px;
   font-weight: bold;
 }
-
-.right-header {
-  width: 50%;
-  margin-left: 50px;
-}
-
-.make_task{
+.create-task{
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 24px;
   color: black;
-  margin-bottom: 10px;
-  font-size:20px;
-}
-
-.make_text{
-  width:80%;
-  margin-bottom: 5px;
+  background-color: #aaa;
+  text-decoration: none;
 }
 
 .logout{
   width: 15%;
-  height: 30px;
-  font-size: 16px;
+  font-size: 18px;
   border-radius: 5px;
   text-decoration: none;
-  margin-left: 40px;
   text-align: center;
   color: white;
   background-color: orange;
-
 }
 
 .messages {
