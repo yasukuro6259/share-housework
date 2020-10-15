@@ -1,0 +1,33 @@
+
+  <div class="task">
+    <div class="task-title">
+      タスク内容
+    </div>
+    <%= form_with url: group_tasks_path, model: [@group, @task], local: true do |f| %>
+
+    <%# <%= render 'shared/error_messages', model: f.object %>
+    <div class="new-task">
+      <div class="weight-bold-text">
+        タスク名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :content, class:"tasks-text", id:"task-name", placeholder:" 例） 食器洗い", maxlength:"50" %>
+      <div class="tasks-explain">
+        <div class="weight-bold-text">
+          タスクの説明
+        </div>
+        <%= f.text_area :description, class:"tasks-text", id:"task-info", placeholder:" 例）食洗機に入れる前に予洗い、洗剤はスプーン1杯、運転モードは標準、乾燥なし" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+      <div class="img-upload">
+        <div class="click-upload">
+          <p class="weight-bold-text">画像のアップロード</p>
+          <%= f.file_field :image, id:"task-image" %>
+        </div>
+      </div>
+      <div class="btn">
+      <%= f.submit "送信", class:"send-btn" %>
+      <%= link_to "戻る", group_tasks_path, class:"back-btn"%>
+      </div>
+    </div>
+    <% end %>
+  </div>
