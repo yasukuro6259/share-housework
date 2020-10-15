@@ -26,6 +26,20 @@ class TasksController < ApplicationController
     @group = Group.find(params[:group_id])
     @task = @group.tasks.find(params[:id])
   end
+
+  def edit
+    @group = Group.find(params[:group_id])
+    @task = @group.tasks.find(params[:id])
+  end
+
+  def update
+    @group = Group.find(params[:group_id])
+    if @group.tasks.update(task_params)
+      redirect_to group_tasks_path
+    else
+      redirect_to group_task_path
+    end
+  end
   
   private
   def task_params
