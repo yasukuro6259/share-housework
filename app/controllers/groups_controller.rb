@@ -1,7 +1,6 @@
 class GroupsController < ApplicationController
   def index
-    @group = Group.new
-    @groups = Group.all
+    @groups = Group.includes(:user)
   end
 
   def create
@@ -9,7 +8,6 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to root_path
     end
-
   end
 
   private
