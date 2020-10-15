@@ -1,0 +1,31 @@
+  <div class="chat">
+    <div class="chat-header">
+      <div class="left-header">
+        <div class="header-title">
+          <%= @group_id.content %>
+        </div>
+      </div>
+      <%= link_to "タスク作成", new_group_task_path(@group_id), class: "create-task"%>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout"%>
+    </div>
+
+    <div class="messages">
+      <% @tasks.each do |task|%>
+      <div class="message">
+        <div class="lower-message">
+          <div class="message-content">
+            <%= task.content%>
+          </div>
+          <div class="edit-delete">
+            <div class="edit-delete-button">
+              <%= link_to "詳細", group_task_path(@group_id, task), method: :get, class: "show-delete-btn" %>
+            </div>
+            <div class="edit-delete-button">
+              <%= link_to "削除", group_task_path(@group_id, task), method: :delete, class: "show-delete-btn" %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
