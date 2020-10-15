@@ -25,11 +25,11 @@
         <div class="click-upload">
           <p class="weight-bold-text">画像</p>
         </div>
-          <%= image_tag @task.image, class: "picture-box"%>
+          <%= image_tag @task.image, class: "image-box"%>
       </div>
       <div class="btn">
-      <%= link_to "編集", edit_group_task_path(@group, @task), class:"edit-btn" %>
-      <%= link_to "戻る", group_tasks_path, class:"back-btn"%>
+        <%= link_to "編集", edit_group_task_path(@group, @task), class:"edit-btn" %>
+        <%= link_to "戻る", group_tasks_path, class:"back-btn"%>
       </div>
     </div>    
   </div>
