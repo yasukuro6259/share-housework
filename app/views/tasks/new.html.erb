@@ -1,7 +1,7 @@
 
   <div class="task">
     <div class="task-title">
-      タスク内容
+      <%= @group_id.content %>
     </div>
     <%= form_with url: group_tasks_path, model: [@group, @task], local: true do |f| %>
 

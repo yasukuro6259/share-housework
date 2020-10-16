@@ -9,7 +9,7 @@
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout"%>
     </div>
 
-    <div class="messages">
+    <div class="tasks">
       <% @tasks.each do |task|%>
       <div class="message">
         <div class="lower-message">

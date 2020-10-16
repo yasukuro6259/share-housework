@@ -5,7 +5,6 @@
   background-image: url("/images/paper_00108.jpg");
   font-family: Helvetica , "游ゴシック", sans-serif;
   width: 40%;
-  height: 100vh;
 }
 
 .side-bar-header {
@@ -24,7 +23,7 @@
   margin-right: 20px;
 }
 
-.create-room {
+.create-group {
   font-size: 20px;
 }
 
@@ -48,24 +47,34 @@
   padding: 10px;
 }
 
-.rooms {
+.groups {
   height: calc(100vh - 100px);
   padding: 46px 20px 0;
   overflow: scroll;
 }
 
-.room {
+.group {
   padding: 0 40px 32px;
 }
 
-.room-name{
+.group-name{
   text-align: center;
-  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
 }
 
-.room-name a {
+.group-btn {
   text-decoration: none;
+  font-size: 32px;
   color: black;
+  }
+
+.group-delete-btn{
+  font-size: 20px;
+  text-decoration: none;
+  color: gray;
 }
 
 .chat {
@@ -107,7 +116,7 @@
   background-color: orange;
 }
 
-.messages {
+.tasks {
   height: calc(100vh - 100px);
   padding: 46px 80px 0;
   overflow: scroll;

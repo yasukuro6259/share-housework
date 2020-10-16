@@ -48,14 +48,18 @@
 }
 .send-btn{
   font-size: 32px;
-  width: 100px;
-  margin-right: 20px;
+  background-color: #ccc;
+  border: 1px solid #aaa;
+  color: #111;
+  padding: 10px;
+  text-decoration: none;
 }
+
 .back-btn{
   font-size: 32px;
   background-color: #aaa;
   border: 1px solid #aaa;
-  color: #fff;
+  color: #111;
   padding: 10px;
   text-decoration: none;
 }
@@ -68,9 +72,22 @@
 
 .edit-btn{
   font-size: 32px;
-  width: 100px;
-  margin-right: 20px;
+  background-color: #aaa;
+  border: 1px solid #aaa;
+  color: #de360e;
+  padding: 10px;
   text-decoration: none;
+  margin-right: 20px;
+}
+
+.delete-btn{
+  font-size: 32px;
+  background-color: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  margin-right: 20px;
 }
 
 .image-box{

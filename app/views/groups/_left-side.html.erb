@@ -1,9 +1,9 @@
   <div class="side-bar">
     <div class="side-bar-header">
       <div class="header-name">
-        Kuroki Family
+        <%= current_user.name %>
       </div>
-      <div class="create-room">
+      <div class="create-group">
         <div class="make-list">
           <div class="header-button">
             <%= form_with model: @group, url: groups_path, local: true do |f| %>
@@ -15,11 +15,12 @@
       </div>
     </div>
 
-    <div class="rooms">
-      <% @groups.each do |group| %>
-        <div class="room">
-          <div class="room-name">
-            <%= link_to group.content, group_tasks_path(group) %>
+    <div class="groups">
+      <% current_user.groups.each do |group| %>
+        <div class="group">
+          <div class="group-name">
+            <%= link_to group.content, group_tasks_path(group), class: "group-btn" %>
+            <%= link_to "削除", group_path(group), method: :delete ,class: "group-delete-btn"%>
           </div>
         </div>
       <% end %>
