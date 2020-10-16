@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
-  before_action :task_params, only: :create
+  before_action :get_task_info, only: [:show, :destroy, :edit, :update]
+  before_action :task_params, only: [:create, :update]
 
   def index
     @group = Group.new
@@ -9,40 +10,50 @@ class TasksController < ApplicationController
   end
 
   def new
+    @group_id = Group.find(params[:group_id])
     @task = Task.new
   end
 
   def create
-    @group = Group.find(params[:group_id])
-    @task = @group.tasks.new(task_params)
+    @group_id = Group.find(params[:group_id])
+    @task = @group_id.tasks.new(task_params)
     if @task.save
-      redirect_to root_path
+      redirect_to group_tasks_path
     else
-      redirect_to new_group_task_path
+      render :new
     end
   end
 
   def show
-    @group = Group.find(params[:group_id])
-    @task = @group.tasks.find(params[:id])
+  end
+
+  def destroy
+    @tasks = @group_id.tasks.includes(:user)
+    if @task.destroy
+      redirect_to group_tasks_path
+    else
+      render :show
+    end
   end
 
   def edit
-    @group = Group.find(params[:group_id])
-    @task = @group.tasks.find(params[:id])
   end
 
   def update
-    @group = Group.find(params[:group_id])
-    if @group.tasks.update(task_params)
-      redirect_to group_tasks_path
+    if @task.update(task_params)
+      redirect_to group_task_path(@group_id, @task)
     else
-      redirect_to group_task_path
+      render :edit
     end
   end
   
   private
   def task_params
     params.require(:task).permit(:content, :description, :image).merge(user_id: current_user.id)
+  end
+
+  def get_task_info
+    @group_id = Group.find(params[:group_id])
+    @task = @group_id.tasks.find(params[:id])
   end
 end
