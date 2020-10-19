@@ -1,6 +1,3 @@
-/* .task-all{
-  border: solid 5px black;
-} */
 .task{
   width: 80vw;
   border: solid 1px black;
@@ -40,6 +37,11 @@
   width: 650px;
   margin-top: 10px;
   padding: 5px 0 0 5px;
+}
+
+img{
+  width:100px;
+  height:100px;
 }
 
 .btn{
