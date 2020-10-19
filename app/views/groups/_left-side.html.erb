@@ -21,7 +21,10 @@
         <div class="group">
           <div class="group-name">
             <%= link_to group.content, group_tasks_path(group), class: "group-btn" %>
-            <%= link_to "削除", group_path(group), method: :delete ,class: "group-delete-btn"%>
+            <div class="link_btns">
+              <%= link_to "編集", edit_group_path(group), class: "group-delete-btn"%>
+              <%= link_to "削除", group_path(group), method: :delete ,class: "group-delete-btn"%>
+            </div>
           </div>
         </div>
       <% end %>
