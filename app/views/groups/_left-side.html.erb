@@ -2,6 +2,7 @@
     <div class="side-bar-header">
       <div class="header-name">
         <%= current_user.name %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout"%>
       </div>
       <div class="create-group">
         <div class="make-list">

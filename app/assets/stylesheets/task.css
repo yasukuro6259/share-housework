@@ -3,7 +3,6 @@
 } */
 .task{
   width: 80vw;
-  height: 100vh;
   border: solid 1px black;
   margin: 10px auto;
   overflow: scroll;
@@ -48,16 +47,16 @@
 }
 .send-btn{
   font-size: 32px;
-  background-color: #ccc;
-  border: 1px solid #aaa;
+  background-color: orange;
+  border: 1px solid orange;
   color: #111;
-  padding: 10px;
+  padding: 5px;
   text-decoration: none;
 }
 
 .back-btn{
   font-size: 32px;
-  background-color: #aaa;
+  background-color: #ccc;
   border: 1px solid #aaa;
   color: #111;
   padding: 10px;
@@ -72,7 +71,7 @@
 
 .edit-btn{
   font-size: 32px;
-  background-color: #aaa;
+  background-color: #f0d138c4;
   border: 1px solid #aaa;
   color: #de360e;
   padding: 10px;
