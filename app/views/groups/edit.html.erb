@@ -11,7 +11,7 @@
       <%= f.text_area :content, class:"tasks-text", id:"task-name", maxlength:"10" %>
       <div class="btn">
       <%= f.submit "更新", class:"send-btn" %>
-      <%= link_to "戻る", groups_path, class:"back-btn"%>
+      <%= link_to "戻る", groups_path, data: {"turbolinks" => false}, class:"back-btn"%>
       </div>
     </div>
     <% end %>
