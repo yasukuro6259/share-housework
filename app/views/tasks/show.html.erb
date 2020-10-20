@@ -28,9 +28,9 @@
           <%= image_tag @task.image, class: "image-box" if @task.image.attached? %>
       </div>
       <div class="btn">
-        <%= link_to "編集", edit_group_task_path(@group_id, @task), class:"edit-btn" %>
+        <%= link_to "編集", edit_group_task_path(@group_id, @task), data: {"turbolinks" => false}, class:"edit-btn" %>
         <%= link_to "削除", group_task_path(@group_id, @task), method: :delete, class:"delete-btn" %>
-        <%= link_to "戻る", group_tasks_path, class:"back-btn"%>
+        <%= link_to "戻る", group_tasks_path, data: {"turbolinks" => false}, class:"back-btn"%>
       </div>
     </div>    
   </div>
