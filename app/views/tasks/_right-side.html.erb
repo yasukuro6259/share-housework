@@ -5,7 +5,7 @@
           <%= @group_id.content %>
         </div>
       </div>
-      <%= link_to "タスク作成", new_group_task_path(@group_id), class: "create-task"%>
+      <%= link_to "タスク作成", new_group_task_path(@group_id), data: {"turbolinks" => false},class: "create-task"%>
     </div>
 
     <div class="tasks">
