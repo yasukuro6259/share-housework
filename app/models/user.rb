@@ -6,6 +6,6 @@ class User < ApplicationRecord
   has_many :groups
   has_many :tasks
 
-  validates :name, presence: true
+  validates :name, presence: true, length:  { maximum: 20}
   validates :password, length: { minimum: 8}
 end
