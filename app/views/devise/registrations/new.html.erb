@@ -3,22 +3,23 @@
     <div class='account-page__inner clearfix'>
       <div class='account-page__inner--left account-page__header'>
         <h2>Create Account</h2>
-        <h5>新規アカウントの作成</h5>
+        <h5>新規アカウント作成</h5>
+        <%= render "devise/shared/links"%>
       </div>
       <div class='account-page__inner--right user-form'>
         <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
           <%= devise_error_messages!%>
           <div class='field'>
             <div class='field-label'>
-              <%= f.label :name%>
+              <%= f.label :name, "ユーザー名"%>
             </div>
             <div class='field-input'>
-              <%= f.text_field :name, autofocus: true%>
+              <%= f.text_field :name, autofocus: true, placeholder: "例. Suzuki Family"%>
             </div>
           </div>
           <div class='field'>
             <div class='field-label'>
-              <%= f.label :email%>
+              <%= f.label :email, "メールアドレス"%>
             </div>
             <div class='field-input'>
               <%= f.email_field :email%>
@@ -26,7 +27,7 @@
           </div>
           <div class='field'>
             <div class='field-label'>
-              <%= f.label :password%>
+              <%= f.label :password, "パスワード"%>
               <i>(英数字8文字以上)</i>
             </div>
             <div class='field-input'>
@@ -35,14 +36,15 @@
           </div>
           <div class='field'>
             <div class='field-label'>
-              <%= f.label :password_confirmation%>
+              <%= f.label :password_confirmation, "パスワード"%>
+              <i>(確認)</i>
             </div>
             <div class='field-input'>
               <%= f.password_field :password_confirmation, autocomplete: "off"%>
             </div>
           </div>
           <div class='actions'>
-            <%= f.submit "Create Account", class: 'btn'%>
+            <%= f.submit "アカウント作成", class: 'btn'%>
           </div>
         </div>
       <% end %>
