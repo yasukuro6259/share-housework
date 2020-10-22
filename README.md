@@ -1,28 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 # アプリケーション名
 ## share-homework
 
@@ -87,6 +64,14 @@ Things you may want to cover:
 ## ユーザー管理機能（サインアップ機能）
 #### アカウント作成ページにて、必要項目を入力し「アカウント作成」ボタンを押すことで、ログインページに遷移できる。
 <a href="https://gyazo.com/cd723eaf7eed5c5accc4e817d9d5ed88"><img src="https://i.gyazo.com/cd723eaf7eed5c5accc4e817d9d5ed88.gif" alt="Image from Gyazo" width="1000"/></a>
+
+# 開発環境
+## [言語]
+Ruby2.6.5
+Ruby on Rails 6.0.3.4
+
+## [OS]
+macOS Catalina 10.15.6
 
 # テーブル設計
 ## users テーブル
