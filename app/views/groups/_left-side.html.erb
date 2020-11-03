@@ -8,7 +8,7 @@
         <div class="make-list">
           <div class="header-button">
             <%= form_with model: @group, url: groups_path, local: true do |f| %>
-              <%= f.text_field :content, class: "group-text", placeholder: 'リストを入力してください' %>
+              <%= f.text_field :content, class: "group-text", placeholder: 'リストを入力（10文字以内）' %>
           </div>
             <%= f.submit "作成", class: "submit-btn"%>
             <% end %>
