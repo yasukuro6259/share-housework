@@ -5,7 +5,7 @@ class TasksController < ApplicationController
   def index
     @group = Group.new
     @groups = Group.includes(:user)
-    @group_id = Group.find(params[:group_id]) #@groupだとリスト入力フォームに入力されてしまう。
+    @group_id = Group.find(params[:group_id]) # @groupだとリスト入力フォームに入力されてしまう。
     @tasks = @group_id.tasks.includes(:user)
   end
 
@@ -46,8 +46,9 @@ class TasksController < ApplicationController
       render :edit
     end
   end
-  
+
   private
+
   def task_params
     params.require(:task).permit(:content, :description, :image).merge(user_id: current_user.id)
   end

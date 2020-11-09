@@ -3,4 +3,4 @@ class Group < ApplicationRecord
   has_many :tasks, dependent: :destroy
 
   validates :content, presence: true, length: { maximum: 10 }
-  end
+end

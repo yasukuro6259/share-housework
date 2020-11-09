@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :task do
-    content         { Faker::Name.last_name}
+    content         { Faker::Name.last_name }
     description     { Faker::Quote.famous_last_words }
 
     association :user

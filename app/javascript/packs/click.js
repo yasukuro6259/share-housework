@@ -1,6 +1,5 @@
   function click(){
     const tasks = document.querySelectorAll(".message-content");
-    console.log(tasks)
     tasks.forEach (function (task) {
       task.addEventListener("click",function(){
         if (task.className == "message-content"){

@@ -25,12 +25,12 @@ RSpec.describe Task, type: :model do
       it 'タスク内容(content)が50文字を超えると登録できない' do
         @task.content = 'a' * 51
         @task.valid?
-        expect(@task.errors.full_messages).to include("Content is too long (maximum is 50 characters)")
+        expect(@task.errors.full_messages).to include('Content is too long (maximum is 50 characters)')
       end
       it 'タスク詳細(description)が500文字を超えると登録できない' do
         @task.description = 'a' * 501
         @task.valid?
-        expect(@task.errors.full_messages).to include("Description is too long (maximum is 500 characters)")
+        expect(@task.errors.full_messages).to include('Description is too long (maximum is 500 characters)')
       end
     end
   end

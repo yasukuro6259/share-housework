@@ -15,17 +15,17 @@ RSpec.describe Group, type: :model do
         expect(@group).to be_valid
       end
     end
-    
+
     context 'リスト作成がうまくいかないとき' do
       it 'リスト内容(content)が空だと投稿できない' do
         @group.content = ''
         @group.valid?
-        expect(@group.errors.full_messages).to include ("Content can't be blank")
+        expect(@group.errors.full_messages).to include("Content can't be blank")
       end
       it 'リスト内容(content)が11文字以上だと投稿できない' do
-        @group.content = 'a' * 11 
+        @group.content = 'a' * 11
         @group.valid?
-        expect(@group.errors.full_messages).to include ("Content is too long (maximum is 10 characters)")
+        expect(@group.errors.full_messages).to include('Content is too long (maximum is 10 characters)')
       end
     end
   end
