@@ -154,8 +154,26 @@
 
 .message-content {
   color: #434a54;
+  width:70%;
   font-size: 20px;
   margin-bottom: 20px;
+  background-color: white;
+  border-bottom: 5px solid #cbcde8;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.changed-message-content {
+  color: #434a54;
+  width:70%;
+  font-size: 20px;
+  margin-bottom: 20px;
+  background-color: gray;
+  border-bottom: 5px solid #cbcde8;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .edit-delete{
