@@ -17,10 +17,10 @@
           </div>
           <div class="edit-delete">
             <div class="edit-delete-button">
-              <%= link_to "詳細", group_task_path(@group_id, task), method: :get, class: "show-delete-btn" %>
+              <%= link_to "詳細", group_task_path(@group_id, task), method: :get, class: "group-delete-btn" %>
             </div>
             <div class="edit-delete-button">
-              <%= link_to "削除", group_task_path(@group_id, task), method: :delete, class: "show-delete-btn" %>
+              <%= link_to "削除", group_task_path(@group_id, task), method: :delete, class: "group-delete-btn" %>
             </div>
           </div>
         </div>
