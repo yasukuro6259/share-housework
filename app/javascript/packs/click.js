@@ -3,12 +3,11 @@
     console.log(tasks)
     tasks.forEach (function (task) {
       task.addEventListener("click",function(){
-        const task_element = document.getElementById("task-content")
-        if (task_element.className == "message-content"){
-          task_element.classList.replace("message-content", "changed-message-content")
+        if (task.className == "message-content"){
+          task.classList.replace("message-content", "changed-message-content")
         }
         else {
-          task_element.classList.replace("changed-message-content", "message-content")
+          task.classList.replace("changed-message-content", "message-content")
         }
       })
     })
