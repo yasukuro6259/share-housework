@@ -7,7 +7,9 @@
       <%= render "devise/shared/links"%>
     </div>
     <div class='account-page__inner--right user-form'>
+    <%# resourceは複数のモデルを参照するためのモデル, asオプション: as: resource_name = params[resource_name] %>
       <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
+      <%# <%= devise_error_messages!%>
         <div class='field'>
           <div class='field-label'>
             <%= f.label :email, "メールアドレス"%>
@@ -26,6 +28,7 @@
           </div>
           <div class='actions'>
             <%= f.submit "ログイン", class: 'btn'%>
+            <%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: 'btn'%>
           </div>
         </div>
       <% end %>
