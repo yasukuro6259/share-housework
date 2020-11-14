@@ -46,7 +46,7 @@
   font-weight: 200;
 }
 .account-page .account-page__header .btn {
-  margin-top: 20px;
+  margin: 20px;
   color: #fff;
   background-color: #ccc;
   font-size: 14px;
@@ -77,12 +77,18 @@
   text-align: center;
   border: none;
   border-radius: 2px;
+  background-color: darkgreen;
+  color: #fff;
 }
 .account-page input[type=submit] {
-  float: left;
   margin-top: 20px;
   color: #fff;
   background-color: #38aef0;
+}
+.account-page a{
+  text-decoration: none;
+  color: brown;
+  margin: 20px;
 }
 .account-page .field-label .field_with_errors {
   display: inline-block;
