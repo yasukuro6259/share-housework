@@ -1,6 +1,5 @@
 .task{
-  width: 80vw;
-  border: solid 1px black;
+  width: 800px;
   margin: 10px auto;
   overflow: scroll;
 }
@@ -8,12 +7,20 @@
 .task-title{
   text-align:center;
   font-size: 36px;
+  font-weight: bold;
 }
 
 .weight-bold-text{
   font-weight: bold;
   font-size:20px;
   margin-top: 20px;
+}
+
+.detail-weight-bold-text{
+  text-align: center;
+  font-weight: bold;
+  font-size:20px;
+  margin-top: 50px;
 }
 
 .indispensable{
@@ -27,14 +34,18 @@
 }
 
 .new-task{
+  width:800px;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  margin:0 50px;
+  align-items: center;
+}
+
+.tasks-explain{
+  width: 800px;
 }
 
 .tasks-text{
-  width: 650px;
+  width: 800px;
   margin-top: 10px;
   padding: 5px 0 0 5px;
 }
@@ -52,21 +63,20 @@ img{
   background-color: orange;
   border: 1px solid orange;
   color: #111;
-  padding: 5px;
+  padding: 6px 15px;
   text-decoration: none;
 }
 
 .back-btn{
   font-size: 32px;
   background-color: #ccc;
-  border: 1px solid #aaa;
   color: #111;
-  padding: 10px;
+  padding: 15px;
+  margin-left:10px;
   text-decoration: none;
 }
 
 .detail-tasks-text{
-  width: 650px;
   font-size: 16px;
   white-space: pre-line;
 }
@@ -74,21 +84,18 @@ img{
 .edit-btn{
   font-size: 32px;
   background-color: #f0d138c4;
-  border: 1px solid #f0d138c4;
   color: #de360e;
-  padding: 10px;
+  padding: 15px;
   text-decoration: none;
-  margin-right: 20px;
 }
 
 .delete-btn{
   font-size: 32px;
   background-color: #aaa;
-  border: 1px solid #aaa;
   color: #fff;
-  padding: 10px;
+  padding: 15px;
   text-decoration: none;
-  margin-right: 20px;
+  margin-left: 10px;
 }
 
 .image-box{

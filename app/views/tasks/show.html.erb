@@ -1,31 +1,32 @@
 
   <div class="task">
     <div class="task-title">
-      タスク内容
+      タスク詳細
     </div>
 
     <%# <%= render 'shared/error_messages', model: f.object %>
     <div class="new-task">
-      <div class="weight-bold-text">
-        タスク名
-        <span class="indispensable">必須</span>
-      </div>
-      <div class="detail-tasks-text">
-        <%= @task.content %>
-      </div>
       <div class="detail-tasks-explain">
-        <div class="weight-bold-text">
+        <div class="detail-weight-bold-text">
+          タスク名
+        </div>
+        <div class="detail-tasks-text">
+          <%= @task.content %>
+        </div>
+      </div>
+      <div class="deteil-tasks-explain">
+        <div class="detail-weight-bold-text">
           タスクの説明
         </div>
         <div class="detail-tasks-text">
           <%= @task.description %>
         </div>
       </div>
-      <div class="img-upload">
-        <div class="click-upload">
-          <p class="weight-bold-text">画像</p>
+      <div class="detail-tasks-explain">
+        <div class="detail-weight-bold-text">
+        画像
         </div>
-          <%= image_tag @task.image, class: "image-box" if @task.image.attached? %>
+        <%= image_tag @task.image, class: "image-box" if @task.image.attached? %>
       </div>
       <div class="btn">
         <%= link_to "編集", edit_group_task_path(@group_id, @task), data: {"turbolinks" => false}, class:"edit-btn" %>
